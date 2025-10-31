@@ -1,0 +1,131 @@
+/* src/components/Header/Header.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #E5E5E5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1D2130;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: #525560;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+}
+
+.navLink:hover {
+  color: #1D2130;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.cloneSection {
+  display: flex;
+  align-items: center;
+}
+
+.cloneBtn {
+  background: #1D2130;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cloneBtn:hover {
+  background: #4CAF50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Active link style */
+.navLinkActive {
+  color: #1D2130;
+  font-weight: 600;
+}
+
+.navLinkActive::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: 30px;
+  }
+  
+  .nav {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  
+  .cloneSection {
+    display: none;
+  }
+  
+  .mobileMenu {
+    display: block;
+  }
+}
