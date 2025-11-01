@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .header {
-  background: #ffffff;
+ background: hsla(234, 21%, 17%, 1);
   border-bottom: 1px solid #E5E5E5;
   position: sticky;
   top: 0;
@@ -18,31 +18,34 @@
   padding: 20px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 24px;
-  font-weight: 700;
-  color: #1D2130;
-  font-family: 'Poppins', sans-serif;
+.logoText {
+font-family: Poppins;
+font-weight: 500;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 0px;
+
 }
 
-.logo img {
-  width: 32px;
-  height: 32px;
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .navLinks {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 32px;
   margin: 0;
   padding: 0;
 }
 
 .navLink {
-  color: #525560;
+  color:  rgba(255, 255, 255, 0.363);
+
+  
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -50,10 +53,12 @@
   transition: color 0.3s ease;
   position: relative;
   padding: 8px 0;
+  white-space: nowrap;
 }
 
 .navLink:hover {
-  color: #1D2130;
+  color: hsla(0, 0%, 100%, 1);
+
 }
 
 .navLink::after {
@@ -63,7 +68,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #4CAF50;
+  
   transition: width 0.3s ease;
 }
 
@@ -71,14 +76,10 @@
   width: 100%;
 }
 
-.cloneSection {
-  display: flex;
-  align-items: center;
-}
-
 .cloneBtn {
   background: #1D2130;
-  color: white;
+  color: hsla(27, 100%, 84%, 1);
+
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 8px;
@@ -86,16 +87,15 @@
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
   display: inline-block;
 }
 
-.cloneBtn:hover {
-  background: #4CAF50;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-}
 
-/* Active link style */
+
+/* Active states */
 .navLinkActive {
   color: #1D2130;
   font-weight: 600;
@@ -108,11 +108,11 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .navLinks {
-    gap: 30px;
+    gap: 24px;
   }
   
-  .nav {
-    padding: 15px 20px;
+  .navContainer {
+    gap: 24px;
   }
 }
 
@@ -121,11 +121,7 @@
     display: none;
   }
   
-  .cloneSection {
+  .cloneBtn {
     display: none;
-  }
-  
-  .mobileMenu {
-    display: block;
   }
 }
