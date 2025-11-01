@@ -1,0 +1,211 @@
+/* Hero.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.hero {
+  padding: 80px 0 0;
+  position: relative;
+  background: hsla(234, 21%, 17%, 1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.heroContent {
+  padding-right: 40px;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 68px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.ctaButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+}
+
+.ctaButton img {
+  height: 56px;
+  width: auto;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Clients Section */
+.clientsSection {
+  background: hsla(234, 21%, 17%, 1);
+  padding: 60px 0;
+}
+
+.clientsWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.clientsText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ourClients {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+ 
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+
+ color: rgba(255, 255, 255, 0.397);
+
+line-height: 20px;
+letter-spacing: 0px;
+
+}
+
+.workedWith {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+.clientsList {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.clientLogo {
+  height: 2px;
+  width: 180px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.clientLogo:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .heroContent {
+    padding-right: 0;
+  }
+  
+  .title {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  .clientsWrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .clientsList {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 0;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .container {
+    margin-bottom: 60px;
+  }
+  
+  .clientsList {
+    gap: 40px;
+  }
+  
+  .clientLogo {
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+  
+  .clientsList {
+    gap: 30px;
+  }
+  
+  .clientLogo {
+    height: 20px;
+  }
+  
+  .ctaButton img {
+    height: 48px;
+  }
+  
+  .workedWith {
+    font-size: 20px;
+  }
+}

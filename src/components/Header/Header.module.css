@@ -1,8 +1,7 @@
-/* src/components/Header/Header.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .header {
- background: hsla(234, 21%, 17%, 1);
+  background: hsla(234, 21%, 17%, 1);
   border-bottom: 1px solid #E5E5E5;
   position: sticky;
   top: 0;
@@ -18,14 +17,14 @@
   padding: 20px;
 }
 
-.logoText {
-font-family: Poppins;
-font-weight: 500;
-font-size: 16px;
-leading-trim: NONE;
-line-height: 24px;
-letter-spacing: 0px;
+.logo {
+  display: flex;
+  align-items: center;
+}
 
+.logo img {
+  height: 32px;
+  width: auto;
 }
 
 .navContainer {
@@ -36,16 +35,13 @@ letter-spacing: 0px;
 
 .navLinks {
   display: flex;
-  list-style: none;
   gap: 32px;
   margin: 0;
   padding: 0;
 }
 
 .navLink {
-  color:  rgba(255, 255, 255, 0.363);
-
-  
+  color: rgba(255, 255, 255, 0.363);
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -56,9 +52,9 @@ letter-spacing: 0px;
   white-space: nowrap;
 }
 
-.navLink:hover {
+.navLink:hover,
+.navLink.active {
   color: hsla(0, 0%, 100%, 1);
-
 }
 
 .navLink::after {
@@ -68,18 +64,18 @@ letter-spacing: 0px;
   left: 0;
   width: 0;
   height: 2px;
-  
+  background: hsla(0, 0%, 100%, 1);
   transition: width 0.3s ease;
 }
 
-.navLink:hover::after {
+.navLink:hover::after,
+.navLink.active::after {
   width: 100%;
 }
 
 .cloneBtn {
   background: #1D2130;
   color: hsla(27, 100%, 84%, 1);
-
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 8px;
@@ -88,21 +84,14 @@ letter-spacing: 0px;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
   white-space: nowrap;
-  border: none;
+  border: 1px solid hsla(27, 100%, 84%, 1);
   cursor: pointer;
   display: inline-block;
 }
 
-
-
-/* Active states */
-.navLinkActive {
+.cloneBtn:hover {
+  background: hsla(27, 100%, 84%, 1);
   color: #1D2130;
-  font-weight: 600;
-}
-
-.navLinkActive::after {
-  width: 100%;
 }
 
 /* Responsive */
