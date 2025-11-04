@@ -117,6 +117,7 @@ letter-spacing: 0px;
 }
 
 .clientsList {
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -128,7 +129,7 @@ letter-spacing: 0px;
 }
 
 .clientLogo {
-  height: 2px;
+  height: 200px;
   width: 180px;
   opacity: 0.7;
   transition: opacity 0.3s ease;
