@@ -1,0 +1,108 @@
+.career {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.heroSection {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sectionLabel {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0;
+}
+
+.shapeImage {
+  width: 40px;
+  height: auto;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.heroDescription {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666;
+  max-width: 600px;
+}
+
+/* Positions Section */
+.positionsSection {
+  padding: 60px 0;
+  text-align: center;
+  background: white;
+}
+
+.iconContainer {
+  margin-bottom: 20px;
+}
+
+.positionIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.positionsText {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.arrowIcon {
+  font-size: 24px;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 60px 0;
+  }
+  
+  .titleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .heroTitle {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  
+  .positionsText {
+    font-size: 16px;
+  }
+}
